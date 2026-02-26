@@ -1,22 +1,35 @@
-import { addPlant } from "./tractor.js"
-
 const plants = [] 
 
 export const addPlant = (seed) => {
+    // If any of the seeds are an array (corn), then push each array object into plants
     if (Array.isArray(seed)) {
-        seed.foreach(seed.push(seed))
-
-    /* for (int i = 0; i < seed.length; i++){
-          seed.push(seed[i])
-     }
-    */
+        for (type of seed) {
+            (plants.push(seed))}
     }
     
     else {
         plants.push(seed)
-    }
+         }
+    
 }
 
 export const usePlants = () => {
     return structuredClone(plants); 
 }
+
+
+// export const addPlant = (seed) => {
+//     // If any of the seeds are an array (corn), then push each array object into plants
+//     if (Array.isArray(seed)) {
+//         seed.forEach(plants.push(seed))
+//     }
+    
+//     else {
+//         plants.push(seed)
+//          }
+    
+// }
+
+// export const usePlants = () => {
+//     return structuredClone(plants); 
+// }

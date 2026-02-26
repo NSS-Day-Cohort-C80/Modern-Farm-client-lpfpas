@@ -14,17 +14,16 @@ import { addPlant, usePlants } from "./field.js"
 import { plantSeeds } from "./tractor.js"
 
 
-const yearlyPlan = createPlan()
-const asparagusSeed = createAsparagus()
-const wheatSeed = createWheat()
-addPlant(wheatSeed)
+const plan = plantSeeds(
+    [
+        ["Potato", "Soybean", "Soybean", "Corn"],
+        ["Wheat", "Corn", "Wheat", "Asparagus"],
+        ["Asparagus", "Wheat", "Soybean", "Corn"],
+        ["Asparagus", "Soybean", "Potato", "Wheat"]
+    ]
+)
+console.log(plan)
 
-const plantedSeeds = usePlants()
-plantSeeds(usePlants)
-console.log(asparagusSeed)
-console.log(wheatSeed)
-console.log(plantedSeeds)
-console.log(plantSeeds)
 
 console.log("Welcome to the main module")
 
