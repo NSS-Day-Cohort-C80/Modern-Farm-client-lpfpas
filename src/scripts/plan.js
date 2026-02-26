@@ -1,3 +1,8 @@
+/* Algorithm-
+
+*/
+
+
 const types = ["Soybean", "Corn", "Asparagus", "Wheat", "Potato", "Sunflower"]
 
 export const createPlan = () => {
