@@ -15,73 +15,73 @@ Planting seeds takes a plan [Array] for the field
 Add the {seed} seed to the plan
 */
 
-export const plantSeeds = (plantingPlan) => {
-    const seedArray = []
-    plantingPlan.forEach(planting => {
-        planting.forEach(plant =>
-        {
-            if (plant.type === "asparagus") 
-                {
-                seedArray.push(createAsparagus(plant)) // Planting the (asparagus) seed
-                }
-            if (plant.type === "corn")
-                {
-                seedArray.push(createCorn(plant))
-                }
-            if (plant.type === "potato")
-                {
-                seedArray.push(createPotato(plant))
-                }
-            if (plant.type === "soybean")
-                {
-                seedArray.push(createSoybean(plant))
-                }
-            if (plant.type === "sunflower")
-                {
-                seedArray.push(createSunflower(plant))
-                }
-            if (plant.type === "wheat")
-                {
-                seedArray.push(createWheat(plant))
-                }
-        })
-    })
-    addPlant(seedArray)
-}
-
-
-// export const plantSeeds = (plantingPlan) => 
-// {
+// export const plantSeeds = (plantingPlan) => {
 //     const seedArray = []
-//     for (const planting of plantingPlan)
-//     {
-//         for (const plant of planting)
+//     plantingPlan.forEach(row => {
+//         row.forEach(plant =>
 //         {
-//             if (plant.type === "asparagus") 
+//             if (plant === "asparagus") 
 //                 {
-//                 seedArray.push(createAsparagus(plant))
+//                 seedArray.push(createAsparagus(plant)) // Planting the (asparagus) seed
 //                 }
-//             if (plant.type === "corn")
+//             if (plant === "corn")
 //                 {
 //                 seedArray.push(createCorn(plant))
 //                 }
-//             if (plant.type === "potato")
+//             if (plant === "potato")
 //                 {
 //                 seedArray.push(createPotato(plant))
 //                 }
-//             if (plant.type === "soybean")
+//             if (plant === "soybean")
 //                 {
 //                 seedArray.push(createSoybean(plant))
 //                 }
-//             if (plant.type === "sunflower")
+//             if (plant === "sunflower")
 //                 {
 //                 seedArray.push(createSunflower(plant))
 //                 }
-//             if (plant.type === "wheat")
+//             if (plant === "wheat")
 //                 {
 //                 seedArray.push(createWheat(plant))
 //                 }
-//         }
-//     }
+//         })
+//     })
 //     addPlant(seedArray)
 // }
+
+
+export const plantSeeds = (plantingPlan) => 
+{
+    const seedArray = []
+    for (const planting of plantingPlan)
+    {
+        for (const plant of planting)
+        {
+            if (plant === "asparagus") 
+                {
+                seedArray.push(createAsparagus(plant))
+                }
+            if (plant === "corn")
+                {
+                seedArray.push(createCorn(plant))
+                }
+            if (plant === "potato")
+                {
+                seedArray.push(createPotato(plant))
+                }
+            if (plant === "soybean")
+                {
+                seedArray.push(createSoybean(plant))
+                }
+            if (plant === "sunflower")
+                {
+                seedArray.push(createSunflower(plant))
+                }
+            if (plant === "wheat")
+                {
+                seedArray.push(createWheat(plant))
+                }
+        }
+    }
+    addPlant(seedArray)
+}

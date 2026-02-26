@@ -12,18 +12,19 @@ import { createWheat } from "./seeds/wheat.js"
 import { createPotato } from "./seeds/potato.js"
 import { addPlant, usePlants } from "./field.js"
 import { plantSeeds } from "./tractor.js"
-
-
-const plan = plantSeeds(
-    [
-        ["Potato", "Soybean", "Soybean", "Corn"],
-        ["Wheat", "Corn", "Wheat", "Asparagus"],
-        ["Asparagus", "Wheat", "Soybean", "Corn"],
-        ["Asparagus", "Soybean", "Potato", "Wheat"]
-    ]
-)
-console.log(plan)
-
+import { harvestPlants } from "./harvester.js"
 
 console.log("Welcome to the main module")
+const yearlyPlan = createPlan()
 
+const wheat = createWheat();
+addPlant(wheat);
+addPlant(createSunflower())
+addPlant(createSoybean())
+addPlant(createPotato())
+addPlant(createCorn())
+addPlant(createAsparagus())
+plantSeeds(yearlyPlan)
+const plants = usePlants()
+const harvest = harvestPlants(plants)
+console.log(harvest)
