@@ -18,14 +18,14 @@ import { Catalog } from "./catalog.js"
 console.log("Welcome to the main module")
 const yearlyPlan = createPlan()
 
-const wheat = createWheat();
-addPlant(wheat);
-addPlant(createSunflower())
-addPlant(createSoybean())
-addPlant(createPotato())
-addPlant(createCorn())
-addPlant(createAsparagus())
-plantSeeds(yearlyPlan)
+// const wheat = createWheat();
+// addPlant(wheat);
+// addPlant(createSunflower())
+// addPlant(createSoybean())
+// addPlant(createPotato())
+// addPlant(createCorn())
+// addPlant(createAsparagus())
+// plantSeeds(yearlyPlan)
 const plants = usePlants()
 const harvest = harvestPlants(plants)
 console.log(harvest)

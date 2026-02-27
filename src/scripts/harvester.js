@@ -3,12 +3,10 @@
 export const harvestPlants = (plantsArray) => {
     const seedArray = []
         for (const plants of plantsArray) {
-            if(plants.type === "corn"){
-                let count = plants.output/2
-                while (count > 0) {
+            if(plants.type === "Corn"){
+
+                plants.output = plants.output/2
                     seedArray.push(plants)
-                    count--
-                }
             }
             else
                 {

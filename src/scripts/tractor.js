@@ -52,36 +52,35 @@ Add the {seed} seed to the plan
 
 export const plantSeeds = (plantingPlan) => 
 {
-    const seedArray = []
     for (const planting of plantingPlan)
     {
         for (const plant of planting)
         {
-            if (plant === "asparagus") 
+            if (plant === "Asparagus") 
                 {
-                seedArray.push(createAsparagus(plant))
+                addPlant(createAsparagus(plant))
                 }
-            if (plant === "corn")
+            if (plant === "Corn")
                 {
-                seedArray.push(createCorn(plant))
+                addPlant(createCorn(plant))
                 }
-            if (plant === "potato")
+            if (plant === "Potato")
                 {
-                seedArray.push(createPotato(plant))
+                addPlant(createPotato(plant))
                 }
-            if (plant === "soybean")
+            if (plant === "Soybean")
                 {
-                seedArray.push(createSoybean(plant))
+                addPlant(createSoybean(plant))
                 }
-            if (plant === "sunflower")
+            if (plant === "Sunflower")
                 {
-                seedArray.push(createSunflower(plant))
+                addPlant(createSunflower(plant))
                 }
-            if (plant === "wheat")
+            if (plant === "Wheat")
                 {
-                seedArray.push(createWheat(plant))
+                addPlant(createWheat(plant))
                 }
         }
     }
-    addPlant(seedArray)
+    
 }
