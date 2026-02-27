@@ -16,6 +16,35 @@ textarea {
 h1,h2,h3,h4,h5,h6 {
   font-family: "Patua One", serif;
   letter-spacing: 2px;
+  display: block;
+}
+
+.container {
+   background-color: rgb(156, 233, 85);
+   display: flex; 
+   flex-wrap: wrap;
+}
+
+.messages {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem 1.5rem;
+    padding: 2rem;
+}
+
+.plant {
+    flex: 0 0 16.666%;
+    padding: 0.5rem;
+}
+
+.flex-container {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.grid {
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .blue {
@@ -32,12 +61,4 @@ h1,h2,h3,h4,h5,h6 {
 
 .red {
     background-color: darksalmon;
-}
-
-/* Container styles */
-.container {
-   background-color: rgb(156, 233, 85);
-   display: flex;
-   margin: 1rem;
-   flex-direction: row;
 }
