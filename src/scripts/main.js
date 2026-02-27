@@ -13,6 +13,7 @@ import { createPotato } from "./seeds/potato.js"
 import { addPlant, usePlants } from "./field.js"
 import { plantSeeds } from "./tractor.js"
 import { harvestPlants } from "./harvester.js"
+import { Catalog } from "./catalog.js"
 
 console.log("Welcome to the main module")
 const yearlyPlan = createPlan()
@@ -28,3 +29,12 @@ plantSeeds(yearlyPlan)
 const plants = usePlants()
 const harvest = harvestPlants(plants)
 console.log(harvest)
+const harvestCatalog = Catalog(harvest)
+console.log(harvestCatalog)
+
+const harvestedHTML = harvestCatalog
+
+//document.querySelector("#harvestGrid")
+const messagesElement = document.querySelector(".messages")
+
+messagesElement.innerHTML = harvestedHTML 
